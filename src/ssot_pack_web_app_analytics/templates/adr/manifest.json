@@ -1,0 +1,38 @@
+[
+  {
+    "id": "adr:web-app-analytics-provider-boundary",
+    "number": 1001,
+    "slug": "web-app-analytics-provider-boundary",
+    "title": "Web App Analytics Provider Boundary",
+    "filename": "ADR-1001-web-app-analytics-provider-boundary.yaml",
+    "target_path": ".ssot/adr/ADR-1001-web-app-analytics-provider-boundary.yaml",
+    "sha256": "4c52a81885a27cc135069439b9fffebe0f700bf6c349f27939f1e3ff47a596a2",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:ssot-pack-web-app-analytics",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.0",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": []
+  },
+  {
+    "id": "adr:product-analytics-event-abstraction",
+    "number": 1002,
+    "slug": "product-analytics-event-abstraction",
+    "title": "Product Analytics Event Abstraction",
+    "filename": "ADR-1002-product-analytics-event-abstraction.yaml",
+    "target_path": ".ssot/adr/ADR-1002-product-analytics-event-abstraction.yaml",
+    "sha256": "02b80d95522ddc1d09f4c47be59c92c58a34cc35fe01bf624d74bd13f3b64af8",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:ssot-pack-web-app-analytics",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.0",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": []
+  }
+]
