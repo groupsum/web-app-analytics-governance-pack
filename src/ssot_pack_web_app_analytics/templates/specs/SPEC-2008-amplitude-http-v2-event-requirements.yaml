@@ -1,0 +1,27 @@
+{
+  "id": "spc:amplitude-http-v2-event-requirements",
+  "number": 2008,
+  "slug": "amplitude-http-v2-event-requirements",
+  "title": "Amplitude HTTP V2 Event Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:server-side-analytics-ingestion-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Amplitude HTTP V2 API"],
+  "scope": {
+    "governs": ["Amplitude HTTP V2 event uploads", "server-originated event payloads", "identity and event property mapping"],
+    "excludes": ["Amplitude chart definitions", "cohort export behavior", "experiment assignment logic"]
+  },
+  "requirements": [
+    "Document required and optional Amplitude event fields for every server-side upload path.",
+    "Validate event type, user or device identifiers, time, event properties, user properties, and insert identifiers where used.",
+    "Capture batching, retry, and rejection behavior for HTTP V2 uploads.",
+    "Preserve the distinction between event properties and user properties."
+  ],
+  "evidence_expectations": [
+    "HTTP V2 request fixture for representative event uploads.",
+    "Endpoint response evidence for accepted and rejected payloads.",
+    "Validation output showing identity and property field checks."
+  ]
+}

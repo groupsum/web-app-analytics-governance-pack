@@ -1,0 +1,27 @@
+{
+  "id": "spc:ga4-automatically-collected-event-requirements",
+  "number": 2002,
+  "slug": "ga4-automatically-collected-event-requirements",
+  "title": "GA4 Automatically Collected Event Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:client-sdk-collection-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["GA4 automatically collected events"],
+  "scope": {
+    "governs": ["GA4 automatically collected event inventory", "auto-event enablement decisions", "auto-event evidence handling"],
+    "excludes": ["manual GA4 ecommerce schemas", "Google Ads conversion configuration", "URL campaign parameter governance"]
+  },
+  "requirements": [
+    "Inventory automatically collected GA4 events expected for each web or app surface.",
+    "Identify events that are enabled by default, conditionally available, or disabled by local collection policy.",
+    "Do not redefine automatically collected event semantics as application-owned events.",
+    "Capture evidence showing which auto-events are emitted in representative runtime states."
+  ],
+  "evidence_expectations": [
+    "DebugView, network, or export samples for expected automatically collected events.",
+    "Configuration record for collection flags and measurement identifiers.",
+    "Gap report for unavailable or intentionally disabled auto-events."
+  ]
+}

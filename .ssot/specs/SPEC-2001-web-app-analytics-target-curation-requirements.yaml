@@ -1,0 +1,33 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2001"
+number: 2001
+slug: "web-app-analytics-target-curation-requirements"
+title: "Web App Analytics Target Curation Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs source inclusion for `pack:web-app-analytics`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs source inclusion for `pack:web-app-analytics`.
+  
+  ## Requirements
+  
+  - The pack MUST include only sources that directly govern web/app analytics collection, event capture, page/screen tracking, SDK calls, server-side ingestion APIs, provider payloads, or analytics support surfaces.
+  - The pack MUST include Firebase Analytics, GA4 automatically collected events, Segment, RudderStack, mParticle, Amplitude, Mixpanel, Heap, PostHog, Plausible, Beacon API, Page Visibility, and Web Application Manifest when those targets are used for web/app analytics collection.
+  - The pack MUST exclude GA4-specific tagging/runtime behavior, URL query attribution foundations, advertising conversion APIs, customer identity/profile governance, legal consent records, and generic observability telemetry unless a later repo-local ADR expands scope.
+  - Accepted sources MUST have a declared authority role: vendor payload, collection call taxonomy, client SDK behavior, server-side ingestion, or web-platform support.
+  
+  ## Evidence Expectations
+  
+  - Each accepted source must appear in the research source file or an approved source update.
+  - Each downstream template must identify the authority role of its target source.
+  - Excluded adjacent targets should have a documented reason when proposed during review.
+spec_kind: "governance"

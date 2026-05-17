@@ -1,0 +1,33 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2004"
+number: 2004
+slug: "client-server-collection-inclusion-requirements"
+title: "Client Server Collection Inclusion Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs inclusion of client-side, app-side, server-side, and batch analytics collection targets in `pack:web-app-analytics`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs inclusion of client-side, app-side, server-side, and batch analytics collection targets in `pack:web-app-analytics`.
+  
+  ## Requirements
+  
+  - The pack MUST distinguish browser/client SDK collection from server-side HTTP ingestion and batch ingestion.
+  - Client SDK targets MUST govern runtime calls, automatic events, manual events, page/screen context, device/app context, and unavailable SDK states where the source defines them.
+  - Server-side ingestion targets MUST govern request payloads, authentication, batching, timestamps, identifiers, response handling, and error behavior where the source defines them.
+  - Mixed collection targets MUST require downstream implementations to trace which events originate client-side and which originate server-side.
+  
+  ## Evidence Expectations
+  
+  - Client collection templates should include runtime call evidence.
+  - Server-side ingestion templates should include request/response fixtures and validation output.
+  - Mixed collection evidence should preserve source path, transformation, and submission evidence.
+spec_kind: "governance"

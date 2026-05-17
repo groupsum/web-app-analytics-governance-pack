@@ -1,0 +1,27 @@
+{
+  "id": "spc:heap-server-side-track-requirements",
+  "number": 2011,
+  "slug": "heap-server-side-track-requirements",
+  "title": "Heap Server-Side Track Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:server-side-analytics-ingestion-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Heap server-side Track API"],
+  "scope": {
+    "governs": ["Heap server-side track calls", "server-originated event payloads", "identity and property mapping"],
+    "excludes": ["Heap client SDK behavior", "Heap reports", "data export jobs"]
+  },
+  "requirements": [
+    "Document server-side Heap events, required identities, timestamps, and properties.",
+    "Validate server-originated payloads before Track API submission.",
+    "Capture endpoint response, retry, and failure handling.",
+    "Separate backend business events from browser auto-captured events."
+  ],
+  "evidence_expectations": [
+    "Track API request fixture for representative server events.",
+    "Validation output for required identity and property fields.",
+    "Endpoint or mock response sample for accepted and rejected payloads."
+  ]
+}

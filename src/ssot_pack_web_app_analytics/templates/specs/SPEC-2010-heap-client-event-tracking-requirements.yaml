@@ -1,0 +1,27 @@
+{
+  "id": "spc:heap-client-event-tracking-requirements",
+  "number": 2010,
+  "slug": "heap-client-event-tracking-requirements",
+  "title": "Heap Client Event Tracking Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:client-sdk-collection-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Heap client-side API reference", "Heap manual event tracking"],
+  "scope": {
+    "governs": ["Heap client-side tracking calls", "manual event capture", "client-side identity and property mapping"],
+    "excludes": ["Heap server-side Track API", "visual labeling workflows", "dashboard analysis"]
+  },
+  "requirements": [
+    "Document manual Heap events, identity calls, and properties collected through client-side APIs.",
+    "Validate event names and properties before client dispatch.",
+    "Capture auto-capture and manual tracking boundaries for each instrumented surface.",
+    "Record privacy and consent conditions that suppress or alter client collection."
+  ],
+  "evidence_expectations": [
+    "Browser SDK fixture or network sample for manual events.",
+    "Validation report for event names and property payloads.",
+    "Runtime sample showing consent or suppression behavior."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "spc:mixpanel-track-event-requirements",
+  "number": 2009,
+  "slug": "mixpanel-track-event-requirements",
+  "title": "Mixpanel Track Event Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:server-side-analytics-ingestion-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Mixpanel Track Events API"],
+  "scope": {
+    "governs": ["Mixpanel track event payloads", "event property handling", "identity and timestamp mapping"],
+    "excludes": ["Mixpanel profile update APIs", "funnels and reports", "data warehouse exports"]
+  },
+  "requirements": [
+    "Document Mixpanel event names, distinct identifiers, timestamps, and event properties for governed track calls.",
+    "Validate payloads against the selected Mixpanel track authority before dispatch.",
+    "Record batching, encoding, and endpoint response behavior where applicable.",
+    "Separate event tracking from profile mutation surfaces."
+  ],
+  "evidence_expectations": [
+    "Track API request fixture for representative events.",
+    "Validation output for required identity and property fields.",
+    "Endpoint or mock response sample for successful and rejected events."
+  ]
+}

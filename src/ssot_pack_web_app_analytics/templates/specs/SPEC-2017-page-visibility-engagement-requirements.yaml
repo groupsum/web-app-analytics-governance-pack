@@ -1,0 +1,27 @@
+{
+  "id": "spc:page-visibility-engagement-requirements",
+  "number": 2017,
+  "slug": "page-visibility-engagement-requirements",
+  "title": "Page Visibility Engagement Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:web-platform-analytics-support-policy"],
+  "primary_targets": ["Page Visibility API", "HTML visibility state"],
+  "scope": {
+    "governs": ["visibility-state analytics triggers", "engagement timing boundaries", "background and foreground transition handling"],
+    "excludes": ["vendor event schema definitions", "session replay", "performance timing metrics"]
+  },
+  "requirements": [
+    "Document visibility-state transitions used to trigger analytics or engagement events.",
+    "Validate that engagement timing does not count hidden or background time unless explicitly intended.",
+    "Capture browser support assumptions and fallback behavior.",
+    "Separate page lifecycle trigger logic from downstream vendor payload schemas."
+  ],
+  "evidence_expectations": [
+    "Browser fixture demonstrating visible, hidden, and resumed states.",
+    "Runtime sample for engagement timing calculations.",
+    "Validation report mapping visibility transitions to emitted analytics events."
+  ]
+}

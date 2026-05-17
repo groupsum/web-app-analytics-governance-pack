@@ -1,0 +1,27 @@
+{
+  "id": "spc:segment-screen-group-alias-requirements",
+  "number": 2004,
+  "slug": "segment-screen-group-alias-requirements",
+  "title": "Segment Screen Group Alias Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:customer-data-call-taxonomy-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Segment Spec overview", "Segment Screen spec", "Segment Group spec", "Segment Alias spec"],
+  "scope": {
+    "governs": ["screen calls", "group calls", "alias calls", "identity and account association payloads"],
+    "excludes": ["identify, track, and page calls", "account billing models", "destination activation policy"]
+  },
+  "requirements": [
+    "Document screen, group, and alias calls as separate governed call types.",
+    "Specify when alias calls may merge identities and what evidence must justify that merge.",
+    "Specify group identifiers, traits, and account context requirements for group calls.",
+    "Capture screen names and properties without treating them as page calls."
+  ],
+  "evidence_expectations": [
+    "Representative screen, group, and alias payload fixtures.",
+    "Identity merge test or review evidence for alias behavior.",
+    "Validation output showing call-type-specific required fields."
+  ]
+}

@@ -1,0 +1,33 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2002"
+number: 2002
+slug: "vendor-analytics-api-inclusion-requirements"
+title: "Vendor Analytics API Inclusion Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs inclusion of vendor and open analytics API targets in `pack:web-app-analytics`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs inclusion of vendor and open analytics API targets in `pack:web-app-analytics`.
+  
+  ## Requirements
+  
+  - The pack MUST include vendor/open analytics sources only when they define collection calls, payload shape, ingestion behavior, event properties, identifiers, page/screen tracking, batching, or analytics query behavior.
+  - Firebase, Segment, RudderStack, mParticle, Amplitude, Mixpanel, Heap, PostHog, and Plausible targets MUST remain provider-specific unless a downstream template explicitly defines a normalized mapping.
+  - Provider reporting or stats query targets MAY be included only when they govern analytics retrieval behavior and are clearly separated from collection behavior.
+  - Provider-specific payload conformance MUST NOT imply customer identity, consent, advertising attribution, or data warehouse export conformance.
+  
+  ## Evidence Expectations
+  
+  - Provider templates should identify supported calls, payload fields, identifiers, timestamps, context, batching, and error behavior where applicable.
+  - Provider mappings should preserve traceability from local fields to provider-specific fields.
+  - Unsupported provider modes should be explicit downstream outcomes.
+spec_kind: "governance"

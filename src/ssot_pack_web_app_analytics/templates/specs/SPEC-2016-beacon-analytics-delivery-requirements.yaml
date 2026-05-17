@@ -1,0 +1,27 @@
+{
+  "id": "spc:beacon-analytics-delivery-requirements",
+  "number": 2016,
+  "slug": "beacon-analytics-delivery-requirements",
+  "title": "Beacon Analytics Delivery Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:web-platform-analytics-support-policy"],
+  "primary_targets": ["W3C Beacon API"],
+  "scope": {
+    "governs": ["browser beacon delivery", "non-blocking analytics submission", "page lifecycle dispatch behavior"],
+    "excludes": ["vendor event schemas", "server-side ingestion APIs", "general fetch behavior"]
+  },
+  "requirements": [
+    "Document when Beacon API delivery is used for analytics submissions.",
+    "Validate payload size, method constraints, and lifecycle timing assumptions for beacon dispatch.",
+    "Provide fallback behavior for unsupported or failed beacon submission when required by the downstream application.",
+    "Do not treat Beacon API support as proof of vendor payload conformance."
+  ],
+  "evidence_expectations": [
+    "Browser capability and dispatch fixture for beacon submissions.",
+    "Runtime sample for page unload or visibility-change delivery.",
+    "Fallback or failure-handling evidence for unsupported environments."
+  ]
+}

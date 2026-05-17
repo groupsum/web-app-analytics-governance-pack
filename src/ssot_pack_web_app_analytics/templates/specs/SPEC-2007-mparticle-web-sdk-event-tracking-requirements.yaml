@@ -1,0 +1,27 @@
+{
+  "id": "spc:mparticle-web-sdk-event-tracking-requirements",
+  "number": 2007,
+  "slug": "mparticle-web-sdk-event-tracking-requirements",
+  "title": "mParticle Web SDK Event Tracking Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:client-sdk-collection-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["mParticle Web SDK event tracking"],
+  "scope": {
+    "governs": ["browser-side mParticle event tracking", "client SDK initialization", "web event attributes"],
+    "excludes": ["server-side Events API ingestion", "mobile SDK behavior", "audience activation"]
+  },
+  "requirements": [
+    "Document Web SDK initialization, identity handling, and event tracking calls.",
+    "Validate custom event names and attributes before client dispatch.",
+    "Capture consent and privacy state used by the Web SDK.",
+    "Separate page or screen behavior from custom event behavior where the selected authority distinguishes them."
+  ],
+  "evidence_expectations": [
+    "Browser runtime fixture or network sample for tracked Web SDK events.",
+    "SDK configuration sample with measurement identifiers redacted as needed.",
+    "Validation output for accepted and rejected event attributes."
+  ]
+}

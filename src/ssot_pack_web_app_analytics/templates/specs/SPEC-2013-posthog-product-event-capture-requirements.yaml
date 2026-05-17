@@ -1,0 +1,27 @@
+{
+  "id": "spc:posthog-product-event-capture-requirements",
+  "number": 2013,
+  "slug": "posthog-product-event-capture-requirements",
+  "title": "PostHog Product Event Capture Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:client-sdk-collection-policy", "adr:customer-data-call-taxonomy-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["PostHog capturing events"],
+  "scope": {
+    "governs": ["client product event capture", "autocapture and custom capture boundaries", "property and identity handling"],
+    "excludes": ["server-side batch ingestion", "feature flags", "session replay"]
+  },
+  "requirements": [
+    "Document which product events are autocaptured, custom captured, or intentionally not captured.",
+    "Validate custom event names, distinct identifiers, properties, and capture timing.",
+    "Record privacy and consent conditions that suppress or alter product event capture.",
+    "Separate product interaction events from diagnostic telemetry."
+  ],
+  "evidence_expectations": [
+    "Browser or app SDK fixture showing representative captured events.",
+    "Validation report for custom capture payloads.",
+    "Runtime sample showing autocapture and custom capture boundaries."
+  ]
+}

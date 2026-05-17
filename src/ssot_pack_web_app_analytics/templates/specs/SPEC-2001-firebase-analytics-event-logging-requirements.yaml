@@ -1,0 +1,27 @@
+{
+  "id": "spc:firebase-analytics-event-logging-requirements",
+  "number": 2001,
+  "slug": "firebase-analytics-event-logging-requirements",
+  "title": "Firebase Analytics Event Logging Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:client-sdk-collection-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Google Analytics for Firebase", "Google Analytics for Firebase log events"],
+  "scope": {
+    "governs": ["client SDK event logging", "event name and parameter handling", "Firebase Analytics evidence capture"],
+    "excludes": ["Firebase authentication", "Crashlytics telemetry", "remote configuration"]
+  },
+  "requirements": [
+    "Document each Firebase Analytics event name, trigger, required parameters, optional parameters, and destination property.",
+    "Preserve the distinction between automatically collected Firebase events and explicitly logged application events.",
+    "Validate event names and parameters against the selected Firebase Analytics authority before release.",
+    "Record consent, retention, and environment handling for client SDK event logging."
+  ],
+  "evidence_expectations": [
+    "SDK logging fixture or emulator output for governed events.",
+    "Validation report mapping emitted event names and parameters to authority targets.",
+    "Runtime sample showing client environment and consent state for representative events."
+  ]
+}

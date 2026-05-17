@@ -1,0 +1,27 @@
+{
+  "id": "spc:plausible-pageview-custom-event-requirements",
+  "number": 2014,
+  "slug": "plausible-pageview-custom-event-requirements",
+  "title": "Plausible Pageview And Custom Event Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:analytics-collection-boundary", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Plausible Events API"],
+  "scope": {
+    "governs": ["Plausible pageview events", "Plausible custom events", "site and property mapping"],
+    "excludes": ["Plausible Stats API queries", "campaign URL parameter policy", "dashboard permissions"]
+  },
+  "requirements": [
+    "Document pageview and custom event payloads separately.",
+    "Validate required event names, domain or site identifiers, URLs, referrers, and custom properties where used.",
+    "Capture client or server dispatch path for each Plausible event.",
+    "Record privacy-sensitive fields and redaction behavior before dispatch."
+  ],
+  "evidence_expectations": [
+    "Pageview and custom event request fixtures.",
+    "Validation output for required site, URL, and property fields.",
+    "Endpoint or mock response sample for accepted and rejected payloads."
+  ]
+}

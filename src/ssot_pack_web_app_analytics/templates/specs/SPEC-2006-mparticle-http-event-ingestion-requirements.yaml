@@ -1,0 +1,27 @@
+{
+  "id": "spc:mparticle-http-event-ingestion-requirements",
+  "number": 2006,
+  "slug": "mparticle-http-event-ingestion-requirements",
+  "title": "mParticle HTTP Event Ingestion Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:server-side-analytics-ingestion-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["mParticle Events API"],
+  "scope": {
+    "governs": ["server-side mParticle event batches", "HTTP ingestion payloads", "identity and device context handling"],
+    "excludes": ["mParticle audience exports", "mobile SDK integration details", "non-analytics partner feeds"]
+  },
+  "requirements": [
+    "Document each server-originated mParticle event type, batch structure, identity fields, and event attributes.",
+    "Validate required application, device, user, and timestamp fields before HTTP ingestion.",
+    "Separate server-generated analytics events from client SDK events.",
+    "Capture retry, deduplication, and error handling behavior for ingestion attempts."
+  ],
+  "evidence_expectations": [
+    "HTTP request fixture with representative event batch payload.",
+    "Validation and endpoint response evidence for accepted and rejected payloads.",
+    "Runtime log sample showing retry or failure handling."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "spc:posthog-capture-batch-requirements",
+  "number": 2012,
+  "slug": "posthog-capture-batch-requirements",
+  "title": "PostHog Capture And Batch Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:server-side-analytics-ingestion-policy", "adr:customer-data-call-taxonomy-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["PostHog Capture and Batch API"],
+  "scope": {
+    "governs": ["PostHog capture API calls", "batch ingestion", "distinct identity and property handling"],
+    "excludes": ["feature flag evaluation", "session replay storage", "dashboard queries"]
+  },
+  "requirements": [
+    "Document capture and batch payloads separately where runtime behavior differs.",
+    "Validate event names, distinct identifiers, properties, timestamps, and batching constraints.",
+    "Capture error handling and retry behavior for ingestion failures.",
+    "Record identity merge or alias behavior only when explicitly governed by the downstream system."
+  ],
+  "evidence_expectations": [
+    "Capture and batch request fixtures for representative events.",
+    "Validation output for event and identity fields.",
+    "Endpoint or mock response evidence for accepted and rejected payloads."
+  ]
+}

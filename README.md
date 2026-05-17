@@ -44,10 +44,24 @@ Web And App Analytics Collection
 
 ## Included SPECs
 
-- `spc:firebase-app-analytics-contract` - Firebase App Analytics Contract
-- `spc:cdp-event-spec-contract` - CDP Event Spec Contract
-- `spc:product-analytics-ingestion-contract` - Product Analytics Ingestion Contract
-- `spc:browser-lifecycle-analytics-contract` - Browser Lifecycle Analytics Contract
+- `spc:firebase-analytics-event-logging-requirements` - Firebase Analytics Event Logging Requirements
+- `spc:ga4-automatically-collected-event-requirements` - GA4 Automatically Collected Event Requirements
+- `spc:segment-identify-track-page-requirements` - Segment Identify Track Page Requirements
+- `spc:segment-screen-group-alias-requirements` - Segment Screen Group Alias Requirements
+- `spc:rudderstack-event-message-requirements` - RudderStack Event Message Requirements
+- `spc:mparticle-http-event-ingestion-requirements` - mParticle HTTP Event Ingestion Requirements
+- `spc:mparticle-web-sdk-event-tracking-requirements` - mParticle Web SDK Event Tracking Requirements
+- `spc:amplitude-http-v2-event-requirements` - Amplitude HTTP V2 Event Requirements
+- `spc:mixpanel-track-event-requirements` - Mixpanel Track Event Requirements
+- `spc:heap-client-event-tracking-requirements` - Heap Client Event Tracking Requirements
+- `spc:heap-server-side-track-requirements` - Heap Server-Side Track Requirements
+- `spc:posthog-capture-batch-requirements` - PostHog Capture And Batch Requirements
+- `spc:posthog-product-event-capture-requirements` - PostHog Product Event Capture Requirements
+- `spc:plausible-pageview-custom-event-requirements` - Plausible Pageview And Custom Event Requirements
+- `spc:plausible-stats-query-requirements` - Plausible Stats Query Requirements
+- `spc:beacon-analytics-delivery-requirements` - Beacon Analytics Delivery Requirements
+- `spc:page-visibility-engagement-requirements` - Page Visibility Engagement Requirements
+- `spc:web-app-manifest-analytics-context-requirements` - Web App Manifest Analytics Context Requirements
 
 ## Install With uv
 

@@ -1,0 +1,27 @@
+{
+  "id": "spc:web-app-manifest-analytics-context-requirements",
+  "number": 2018,
+  "slug": "web-app-manifest-analytics-context-requirements",
+  "title": "Web App Manifest Analytics Context Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:web-platform-analytics-support-policy"],
+  "primary_targets": ["Web Application Manifest"],
+  "scope": {
+    "governs": ["installed web app analytics context", "manifest-derived application identity", "display and launch context metadata"],
+    "excludes": ["vendor event schema definitions", "service worker caching", "app store listing metadata"]
+  },
+  "requirements": [
+    "Document which Web App Manifest fields are used as analytics context.",
+    "Validate manifest availability and selected fields for installed web app analytics flows.",
+    "Capture launch context, display mode, and application identity when they affect analytics interpretation.",
+    "Do not infer user identity or consent from manifest metadata."
+  ],
+  "evidence_expectations": [
+    "Manifest fixture with selected analytics context fields.",
+    "Runtime sample showing installed or standalone display context where applicable.",
+    "Validation output for manifest-derived analytics context mapping."
+  ]
+}

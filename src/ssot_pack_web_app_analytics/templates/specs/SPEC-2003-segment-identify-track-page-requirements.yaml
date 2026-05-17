@@ -1,0 +1,27 @@
+{
+  "id": "spc:segment-identify-track-page-requirements",
+  "number": 2003,
+  "slug": "segment-identify-track-page-requirements",
+  "title": "Segment Identify Track Page Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:customer-data-call-taxonomy-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Segment Spec overview", "Segment Identify spec", "Segment Track spec", "Segment Page spec"],
+  "scope": {
+    "governs": ["identify calls", "track calls", "page calls", "Segment-compatible payload mapping"],
+    "excludes": ["warehouse modeling", "destination-specific transformations", "consent management platform configuration"]
+  },
+  "requirements": [
+    "Document identify, track, and page calls as separate governed call types.",
+    "Specify required user identifiers, anonymous identifiers, event names, traits, properties, context, and timestamps.",
+    "Validate payload shape before client or server dispatch.",
+    "Preserve vendor field names where downstream compatibility depends on them."
+  ],
+  "evidence_expectations": [
+    "Representative identify, track, and page payload fixtures.",
+    "Schema or contract validation output for each governed call type.",
+    "Destination or collection endpoint sample proving payload acceptance."
+  ]
+}

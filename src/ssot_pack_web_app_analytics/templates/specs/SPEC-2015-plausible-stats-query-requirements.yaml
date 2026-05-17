@@ -1,0 +1,27 @@
+{
+  "id": "spc:plausible-stats-query-requirements",
+  "number": 2015,
+  "slug": "plausible-stats-query-requirements",
+  "title": "Plausible Stats Query Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["Plausible Stats API"],
+  "scope": {
+    "governs": ["Plausible stats query parameters", "metrics and dimensions", "analytics reporting payloads"],
+    "excludes": ["Plausible event collection", "dashboard presentation", "warehouse exports"]
+  },
+  "requirements": [
+    "Document supported Stats API query endpoints, filters, metrics, dimensions, and time periods.",
+    "Validate query parameters before requesting analytics reports.",
+    "Preserve the distinction between collection events and reporting queries.",
+    "Capture authorization and environment handling for reporting API use."
+  ],
+  "evidence_expectations": [
+    "Stats API request fixtures for supported reporting queries.",
+    "Validation output for metrics, dimensions, filters, and date ranges.",
+    "Response fixture or mock proving expected result shape."
+  ]
+}

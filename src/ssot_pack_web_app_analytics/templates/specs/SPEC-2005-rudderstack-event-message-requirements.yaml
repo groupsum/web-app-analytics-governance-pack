@@ -1,0 +1,27 @@
+{
+  "id": "spc:rudderstack-event-message-requirements",
+  "number": 2005,
+  "slug": "rudderstack-event-message-requirements",
+  "title": "RudderStack Event Message Requirements",
+  "status": "active",
+  "supersedes": [],
+  "superseded_by": [],
+  "spec_kind": "governance",
+  "adr_ids": ["adr:customer-data-call-taxonomy-policy", "adr:vendor-analytics-payload-authority"],
+  "primary_targets": ["RudderStack Event Specification"],
+  "scope": {
+    "governs": ["RudderStack event message payloads", "event type taxonomy", "context and property mapping"],
+    "excludes": ["RudderStack transformation code", "warehouse sync jobs", "destination-specific credential management"]
+  },
+  "requirements": [
+    "Document supported RudderStack message types and required fields per type.",
+    "Preserve source identifiers, anonymous identifiers, user identifiers, context, traits, properties, and timestamps as governed fields.",
+    "Validate event payloads before dispatch to RudderStack-compatible collection paths.",
+    "Record deviations from RudderStack naming or type expectations as explicit downstream decisions."
+  ],
+  "evidence_expectations": [
+    "Payload fixtures for each supported message type.",
+    "Validation output against the selected RudderStack event authority.",
+    "Collection endpoint or local adapter acceptance sample."
+  ]
+}

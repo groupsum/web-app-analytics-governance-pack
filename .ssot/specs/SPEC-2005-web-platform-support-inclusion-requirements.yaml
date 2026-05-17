@@ -1,0 +1,34 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2005"
+number: 2005
+slug: "web-platform-support-inclusion-requirements"
+title: "Web Platform Support Inclusion Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs inclusion of Beacon API, Page Visibility, and Web Application Manifest targets in `pack:web-app-analytics`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs inclusion of Beacon API, Page Visibility, and Web Application Manifest targets in `pack:web-app-analytics`.
+  
+  ## Requirements
+  
+  - The pack MUST include Beacon API only as a non-blocking analytics or telemetry delivery support target.
+  - The pack MUST include Page Visibility only as a visibility, engagement, lifecycle, or session-context support target.
+  - The pack MUST include Web Application Manifest only as an installed-web-app identity, scope, start URL, and app-entry context target.
+  - Web platform support targets MUST NOT be treated as provider analytics payload schemas.
+  - Web performance RUM metrics MUST remain out of scope unless a later repo-local decision expands scope.
+  
+  ## Evidence Expectations
+  
+  - Beacon templates should include delivery and fallback evidence.
+  - Page Visibility templates should include visible, hidden, and transition evidence.
+  - Web Application Manifest templates should include manifest ID, scope, start URL, and launch-context evidence where applicable.
+spec_kind: "governance"

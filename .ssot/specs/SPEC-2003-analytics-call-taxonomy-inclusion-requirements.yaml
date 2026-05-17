@@ -1,0 +1,33 @@
+schema_version: 9
+kind: "spec"
+id: "spc:2003"
+number: 2003
+slug: "analytics-call-taxonomy-inclusion-requirements"
+title: "Analytics Call Taxonomy Inclusion Requirements"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "This specification governs inclusion of analytics call taxonomy targets in `pack:web-app-analytics`."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Scope
+  
+  This specification governs inclusion of analytics call taxonomy targets in `pack:web-app-analytics`.
+  
+  ## Requirements
+  
+  - The pack MUST include identify, track, page, screen, group, alias, capture, batch, pageview, and custom event surfaces when an accepted source defines them.
+  - The pack MUST distinguish call taxonomy from customer identity/profile governance.
+  - The pack MUST require downstream templates to identify payload fields, context fields, anonymous identifiers, user identifiers, group/account identifiers, timestamps, integrations, and event properties where the source defines them.
+  - The pack MUST treat provider-specific call names as authoritative only for the provider that defines them.
+  
+  ## Evidence Expectations
+  
+  - Call taxonomy templates should include positive and negative examples for supported calls.
+  - Templates should preserve raw provider call evidence and any local normalized mapping evidence.
+  - Identifier-bearing analytics calls should remain separate from governed identity records.
+spec_kind: "governance"
