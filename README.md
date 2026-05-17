@@ -35,8 +35,12 @@ Web And App Analytics Collection
 
 ## Included ADRs
 
-- `adr:web-app-analytics-provider-boundary` - Web App Analytics Provider Boundary
-- `adr:product-analytics-event-abstraction` - Product Analytics Event Abstraction
+- `adr:analytics-collection-boundary` - Analytics Collection Boundary
+- `adr:customer-data-call-taxonomy-policy` - Customer Data Call Taxonomy Policy
+- `adr:vendor-analytics-payload-authority` - Vendor Analytics Payload Authority
+- `adr:client-sdk-collection-policy` - Client SDK Collection Policy
+- `adr:server-side-analytics-ingestion-policy` - Server-Side Analytics Ingestion Policy
+- `adr:web-platform-analytics-support-policy` - Web Platform Analytics Support Policy
 
 ## Included SPECs
 

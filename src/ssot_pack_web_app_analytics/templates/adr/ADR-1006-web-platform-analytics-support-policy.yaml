@@ -1,0 +1,35 @@
+{
+  "id": "adr:web-platform-analytics-support-policy",
+  "number": 1006,
+  "slug": "web-platform-analytics-support-policy",
+  "title": "Web Platform Analytics Support Policy",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Some web platform standards support analytics collection without defining analytics payloads.",
+    "Beacon API can improve non-blocking delivery reliability, Page Visibility can support engagement or session context, and Web Application Manifest can affect installed-app entry and scope context.",
+    "Downstream repositories need a decision that treats these standards as support surfaces rather than analytics schemas."
+  ],
+  "authority_sources": [
+    "W3C Beacon API",
+    "Page Visibility API / HTML visibility state",
+    "Web Application Manifest"
+  ],
+  "decision": [
+    "This repository treats Beacon API, Page Visibility, and Web Application Manifest as optional web-platform analytics support authorities.",
+    "Implementations must state whether they use these support surfaces for delivery reliability, visibility/session context, or installed-app analytics context.",
+    "Web platform support conformance must not be used as proof of provider payload conformance."
+  ],
+  "consequences": [
+    "Downstream tests can validate delivery, visibility, and manifest-context behavior independently from provider APIs.",
+    "Analytics support behavior can be optional and explicitly unsupported where not relevant.",
+    "Provider payload evidence and platform support evidence remain separable."
+  ],
+  "exclusions": [
+    "Analytics provider payload schemas",
+    "Full web performance RUM metrics",
+    "Progressive web app feature conformance",
+    "Legal consent compliance"
+  ]
+}

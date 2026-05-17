@@ -1,0 +1,29 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1003"
+number: 1003
+slug: "customer-data-call-taxonomy-boundary"
+title: "Customer Data Call Taxonomy Boundary"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "Web and app analytics systems commonly expose collection primitives such as identify, track, page, screen, group, alias, capture, batch, pageview, custom events, and event properties."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  Web and app analytics systems commonly expose collection primitives such as identify, track, page, screen, group, alias, capture, batch, pageview, custom events, and event properties.
+  
+  These calls can carry user or account identifiers, but their governance purpose in this pack is analytics collection, not identity profile governance.
+  
+  ## Decision
+  
+  This repository will treat identify, track, page, screen, group, alias, capture, batch, pageview, and custom event calls as analytics collection primitives when they appear in accepted source documentation.
+  
+  The pack will not treat those calls as full customer identity, access management, consent record, or profile unification authority.
+  
+  Packaged templates may require downstream repositories to distinguish call taxonomy, payload fields, context objects, identifiers, and event properties.

@@ -1,0 +1,41 @@
+{
+  "id": "adr:analytics-collection-boundary",
+  "number": 1001,
+  "slug": "analytics-collection-boundary",
+  "title": "Analytics Collection Boundary",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Applications can collect analytics data through browser SDKs, app SDKs, server-side HTTP APIs, batch APIs, or mixed collection paths.",
+    "Each collection path has different evidence, failure modes, ownership, and runtime context.",
+    "Downstream repositories need a durable decision that declares which analytics collection paths are governed."
+  ],
+  "authority_sources": [
+    "Google Analytics for Firebase",
+    "Segment Spec overview",
+    "RudderStack Event Specification",
+    "mParticle Events API",
+    "Amplitude HTTP V2 API",
+    "Mixpanel Track Events API",
+    "Heap APIs",
+    "PostHog Capture and Batch API",
+    "Plausible Events API"
+  ],
+  "decision": [
+    "This repository treats analytics collection as a governed boundary across client SDK, app SDK, server-side HTTP, batch, and mixed collection modes.",
+    "Implementations must state which collection modes they support and which provider or open analytics specification governs each mode.",
+    "Collection mode support must not be inferred from adjacent provider support unless that mode is explicitly governed."
+  ],
+  "consequences": [
+    "Downstream tests can validate browser, app, server-side, and batch collection independently.",
+    "Implementations can claim partial provider support without claiming every collection path.",
+    "Evidence can remain scoped to the runtime where collection actually occurs."
+  ],
+  "exclusions": [
+    "Advertising conversion upload APIs",
+    "Customer identity profile governance",
+    "Legal consent compliance",
+    "Generic observability telemetry unrelated to analytics collection"
+  ]
+}

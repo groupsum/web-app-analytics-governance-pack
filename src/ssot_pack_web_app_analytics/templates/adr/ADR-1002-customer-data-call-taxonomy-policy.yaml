@@ -1,0 +1,41 @@
+{
+  "id": "adr:customer-data-call-taxonomy-policy",
+  "number": 1002,
+  "slug": "customer-data-call-taxonomy-policy",
+  "title": "Customer Data Call Taxonomy Policy",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Analytics providers expose customer-data collection calls such as identify, track, page, screen, group, alias, capture, batch, pageview, and custom event calls.",
+    "These calls can carry identifiers and context, but their primary role in analytics systems is event and audience measurement collection.",
+    "Downstream repositories need a decision that separates analytics call taxonomy from customer identity/profile governance."
+  ],
+  "authority_sources": [
+    "Segment Spec overview",
+    "Segment Page spec",
+    "RudderStack Event Specification",
+    "mParticle Events API",
+    "Amplitude HTTP V2 API",
+    "Mixpanel Track Events API",
+    "Heap APIs",
+    "PostHog Capture and Batch API",
+    "Plausible Events API"
+  ],
+  "decision": [
+    "This repository treats identify, track, page, screen, group, alias, capture, batch, pageview, and custom event calls as analytics collection primitives when they are defined by the selected authority source.",
+    "Implementations must distinguish analytics call behavior from identity profile lifecycle behavior.",
+    "Provider-specific call names, payload fields, context objects, and identifier fields must remain traceable to the chosen source."
+  ],
+  "consequences": [
+    "Downstream tests can validate analytics call shape without asserting full identity governance.",
+    "Identifier-bearing analytics payloads can be governed while keeping identity records out of scope.",
+    "Provider-specific call taxonomies can coexist with a local normalized analytics abstraction when mappings are evidenced."
+  ],
+  "exclusions": [
+    "SCIM identity provisioning",
+    "OpenID Connect profile claims",
+    "Consent receipt records",
+    "Customer master profile unification"
+  ]
+}

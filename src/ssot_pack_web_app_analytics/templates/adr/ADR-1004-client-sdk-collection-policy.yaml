@@ -1,0 +1,39 @@
+{
+  "id": "adr:client-sdk-collection-policy",
+  "number": 1004,
+  "slug": "client-sdk-collection-policy",
+  "title": "Client SDK Collection Policy",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Browser, mobile, and app SDKs can collect analytics events directly from user-facing runtimes.",
+    "Client SDK collection can include automatic events, manual events, page/screen tracking, device/app context, and user properties.",
+    "Client runtime evidence differs from server-side ingestion evidence."
+  ],
+  "authority_sources": [
+    "Google Analytics for Firebase",
+    "Google Analytics for Firebase: log events",
+    "GA4 automatically collected events",
+    "mParticle Web SDK event tracking",
+    "Heap client-side API reference",
+    "Heap manual event tracking",
+    "PostHog capturing events"
+  ],
+  "decision": [
+    "This repository treats client SDK collection as a governed analytics collection mode when the downstream implementation uses browser, mobile, or app SDKs.",
+    "Implementations must identify which SDK calls, automatic events, manual events, page or screen events, and context fields are supported.",
+    "Client SDK evidence must not be used as proof of server-side ingestion behavior by itself."
+  ],
+  "consequences": [
+    "Downstream tests can validate SDK calls, automatic event behavior, manual event behavior, and runtime context separately.",
+    "Client-side absence, disabled SDKs, blocked requests, and unsupported runtime contexts can be modeled as explicit outcomes.",
+    "Client SDK collection can coexist with server-side ingestion when both are separately governed."
+  ],
+  "exclusions": [
+    "Server-side HTTP ingestion APIs",
+    "Advertising conversion APIs",
+    "Customer identity profile lifecycle",
+    "Consent legal basis determination"
+  ]
+}

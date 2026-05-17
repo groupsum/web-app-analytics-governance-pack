@@ -1,0 +1,29 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1004"
+number: 1004
+slug: "client-and-server-collection-boundary"
+title: "Client And Server Collection Boundary"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "Web/app analytics collection can occur through browser SDKs, mobile/app SDKs, server-side HTTP ingestion APIs, batch APIs, or mixed collection paths."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  Web/app analytics collection can occur through browser SDKs, mobile/app SDKs, server-side HTTP ingestion APIs, batch APIs, or mixed collection paths.
+  
+  The evidence and failure modes differ by collection path. Browser SDKs expose client runtime context. Server-side APIs expose backend request construction, authentication, batching, and transport behavior.
+  
+  ## Decision
+  
+  This repository will require downstream templates to distinguish client SDK collection from server-side analytics ingestion.
+  
+  Provider support must be scoped to the collection path actually used: browser, app SDK, server-side HTTP, batch, or mixed.
+  
+  Browser/client collection evidence must not be treated as proof of server-side ingestion behavior, and server-side ingestion evidence must not be treated as proof of client SDK behavior.

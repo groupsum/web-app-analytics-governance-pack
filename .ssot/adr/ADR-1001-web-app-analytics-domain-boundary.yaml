@@ -1,0 +1,27 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1001"
+number: 1001
+slug: "web-app-analytics-domain-boundary"
+title: "Web App Analytics Domain Boundary"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "The `pack:web-app-analytics` pack curates governance templates for web and app analytics collection. Its source set includes Firebase Analytics, GA4 automatically collected events, Segment, RudderStack, mParticle, Amplitude, Mixpanel, Heap, PostHog, Plausible, W3C Beacon API, Page Visibility, and Web Application Manifest."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  The `pack:web-app-analytics` pack curates governance templates for web and app analytics collection. Its source set includes Firebase Analytics, GA4 automatically collected events, Segment, RudderStack, mParticle, Amplitude, Mixpanel, Heap, PostHog, Plausible, W3C Beacon API, Page Visibility, and Web Application Manifest.
+  
+  Adjacent subjects are intentionally outside this pack when they primarily govern GA4-specific tagging, generic telemetry envelopes, URL query attribution, ad conversion APIs, customer identity/profile governance, consent/privacy records, or web performance RUM.
+  
+  ## Decision
+  
+  This repository will curate web/app analytics collection surfaces for `pack:web-app-analytics`: client SDK event logging, server-side analytics ingestion, customer data calls, page/screen tracking, custom event capture, batch capture, pageview/custom event APIs, and web-platform support surfaces used by analytics collection.
+  
+  The pack will not curate GA4-specific tagging/runtime behavior, advertising conversion APIs, customer identity profile systems, consent/privacy signal standards, or generic observability telemetry unless a later repo-local decision expands scope.

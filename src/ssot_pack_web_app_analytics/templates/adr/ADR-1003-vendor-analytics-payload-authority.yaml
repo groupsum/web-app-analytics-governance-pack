@@ -1,0 +1,42 @@
+{
+  "id": "adr:vendor-analytics-payload-authority",
+  "number": 1003,
+  "slug": "vendor-analytics-payload-authority",
+  "title": "Vendor Analytics Payload Authority",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Web and app analytics systems use provider-specific payload shapes, identifiers, timestamps, context objects, event properties, and batching conventions.",
+    "A downstream repository may integrate one provider, many providers, or a local abstraction that maps to provider-specific payloads.",
+    "Downstream repositories need an explicit decision for which vendor or open analytics specification is authoritative for each payload surface."
+  ],
+  "authority_sources": [
+    "Google Analytics for Firebase",
+    "GA4 automatically collected events",
+    "Segment Spec overview",
+    "RudderStack Event Specification",
+    "mParticle Events API",
+    "Amplitude HTTP V2 API",
+    "Mixpanel Track Events API",
+    "Heap APIs",
+    "PostHog Capture and Batch API",
+    "Plausible Events API"
+  ],
+  "decision": [
+    "This repository treats the selected provider or open analytics documentation as the authority for payload shape and semantics for that provider.",
+    "Implementations must declare which provider payload authorities they support.",
+    "Local analytics abstractions must preserve traceability from local fields to provider-specific payload fields when provider conformance is claimed."
+  ],
+  "consequences": [
+    "Downstream tests can validate provider-specific payloads without requiring every provider in the pack.",
+    "Provider mappings can be audited separately from local event model design.",
+    "Unsupported provider surfaces can remain explicit out-of-scope decisions."
+  ],
+  "exclusions": [
+    "Provider reporting APIs unless separately governed",
+    "Data warehouse export schemas unless separately governed",
+    "Advertising conversion APIs",
+    "Privacy compliance records"
+  ]
+}

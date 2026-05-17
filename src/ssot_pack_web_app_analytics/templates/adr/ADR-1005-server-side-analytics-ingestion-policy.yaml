@@ -1,0 +1,38 @@
+{
+  "id": "adr:server-side-analytics-ingestion-policy",
+  "number": 1005,
+  "slug": "server-side-analytics-ingestion-policy",
+  "title": "Server-Side Analytics Ingestion Policy",
+  "status": "accepted",
+  "supersedes": [],
+  "superseded_by": [],
+  "context": [
+    "Backend services can submit analytics events through HTTP ingestion APIs, batch endpoints, or server SDKs.",
+    "Server-side ingestion surfaces commonly govern authentication, batching, timestamps, identifiers, event properties, context, idempotency, and response handling.",
+    "Downstream repositories need a decision that separates backend ingestion evidence from browser or app SDK evidence."
+  ],
+  "authority_sources": [
+    "mParticle Events API",
+    "Amplitude HTTP V2 API",
+    "Mixpanel Track Events API",
+    "Heap server-side Track API",
+    "PostHog Capture and Batch API",
+    "Plausible Events API"
+  ],
+  "decision": [
+    "This repository treats server-side analytics ingestion as a governed collection mode when a downstream implementation submits analytics events from backend systems.",
+    "Implementations must define endpoint, authentication, batching, timestamp, identifier, event property, context, and response-handling requirements for each supported provider.",
+    "Server-side ingestion evidence must not be used as proof of client SDK runtime behavior by itself."
+  ],
+  "consequences": [
+    "Downstream tests can validate request payloads, batching, error handling, authentication, and replay/idempotency behavior where applicable.",
+    "Backend event pipelines can be governed independently from browser SDKs.",
+    "Mixed collection implementations can trace which events originate client-side and which originate server-side."
+  ],
+  "exclusions": [
+    "Browser SDK instrumentation",
+    "Mobile install attribution APIs",
+    "Advertising conversion uploads",
+    "Data warehouse export evidence"
+  ]
+}

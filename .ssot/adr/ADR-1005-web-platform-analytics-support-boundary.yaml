@@ -1,0 +1,29 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1005"
+number: 1005
+slug: "web-platform-analytics-support-boundary"
+title: "Web Platform Analytics Support Boundary"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "Beacon API, Page Visibility, and Web Application Manifest are web platform specifications adjacent to analytics collection. They can support analytics delivery, engagement/session state, and installed app context, but they do not define analytics event schemas or provider payloads."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  Beacon API, Page Visibility, and Web Application Manifest are web platform specifications adjacent to analytics collection. They can support analytics delivery, engagement/session state, and installed app context, but they do not define analytics event schemas or provider payloads.
+  
+  Downstream repositories need a decision that includes these standards only as support surfaces.
+  
+  ## Decision
+  
+  This repository will include Beacon API, Page Visibility, and Web Application Manifest only as web-platform analytics support targets.
+  
+  Beacon API governs non-blocking delivery support. Page Visibility governs document visibility state and visibility changes. Web Application Manifest governs installed web app identity, scope, and start URL context.
+  
+  These standards must not be treated as vendor analytics payload authorities.

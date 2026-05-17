@@ -1,0 +1,33 @@
+schema_version: 9
+kind: "adr"
+id: "adr:1002"
+number: 1002
+slug: "analytics-source-authority-stratification"
+title: "Analytics Source Authority Stratification"
+status: "accepted"
+origin: "repo-local"
+decision_date: null
+tags: []
+summary: "The pack combines vendor analytics SDK/API documentation with open web platform specifications. Vendor and open-source analytics documents define collection calls, payloads, identifiers, batching, event properties, and ingestion behavior. Web platform specifications define supporting browser behavior for delivery reliability, visibility state, and installed-app context."
+supersedes: []
+superseded_by: []
+status_notes: []
+references: []
+body: |-
+  ## Context
+  
+  The pack combines vendor analytics SDK/API documentation with open web platform specifications. Vendor and open-source analytics documents define collection calls, payloads, identifiers, batching, event properties, and ingestion behavior. Web platform specifications define supporting browser behavior for delivery reliability, visibility state, and installed-app context.
+  
+  Mixing those authority layers can create false claims, such as treating Beacon API as an analytics schema authority or treating a vendor tracking API as a general customer identity standard.
+  
+  ## Decision
+  
+  This repository will stratify web/app analytics sources by role:
+  
+  - Firebase and GA4 auto-event documentation govern Google app/web analytics event collection behavior in this pack.
+  - Segment, RudderStack, mParticle, Amplitude, Mixpanel, Heap, PostHog, and Plausible govern vendor/open analytics collection calls and payloads.
+  - Beacon API governs asynchronous browser delivery support for analytics or telemetry payloads.
+  - Page Visibility governs visibility/engagement context used by analytics sessions.
+  - Web Application Manifest governs installed web app entry and scope context that can affect app-style analytics boundaries.
+  
+  Packaged templates must preserve these authority roles when assigning downstream requirements.
