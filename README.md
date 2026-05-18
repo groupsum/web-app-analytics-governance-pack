@@ -28,7 +28,6 @@ Use this package when a downstream repository needs to answer: which standards, 
 ## Pack Metadata
 
 - Pack ID: `pack:web-app-analytics`
-- Priority: `P1.2`
 - PyPI package: `web-app-analytics-governance-pack`
 - Import package: `ssot_pack_web_app_analytics`
 - GitHub repository: `groupsum/web-app-analytics-governance-pack`
