@@ -33,7 +33,7 @@ Use this package when a downstream repository needs to answer: which standards, 
 - Pack ID: `pack:web-app-analytics`
 - PyPI package: `web-app-analytics-governance-pack`
 - Import package: `ssot_pack_web_app_analytics`
-- GitHub repository: `groupsum/web-app-analytics-governance-pack`
+- GitHub repository: [groupsum/web-app-analytics-governance-pack](https://github.com/groupsum/web-app-analytics-governance-pack)
 - Reservation owner: `extension-pack:web-app-analytics-governance-pack`
 
 ## Domain Focus
