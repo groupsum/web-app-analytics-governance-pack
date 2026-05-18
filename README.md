@@ -1,4 +1,4 @@
-# ssot-pack-web-app-analytics
+# web-app-analytics-governance-pack
 
 Installable SSOT governance pack for web analytics, app analytics, product analytics, CDP event specs, and browser lifecycle collection.
 
@@ -8,10 +8,10 @@ This repository is an installable SSOT Registry governance pack. It packages imm
 
 - Pack ID: `pack:web-app-analytics`
 - Priority: `P1.2`
-- PyPI package: `ssot-pack-web-app-analytics`
+- PyPI package: `web-app-analytics-governance-pack`
 - Import package: `ssot_pack_web_app_analytics`
 - GitHub repository: `groupsum/web-app-analytics-governance-pack`
-- Reservation owner: `extension-pack:ssot-pack-web-app-analytics`
+- Reservation owner: `extension-pack:web-app-analytics-governance-pack`
 
 ## Domain Focus
 
@@ -66,15 +66,15 @@ Web And App Analytics Collection
 ## Install With uv
 
 ```bash
-uv add ssot-pack-web-app-analytics
-uv add ssot-registry ssot-pack-web-app-analytics
+uv add web-app-analytics-governance-pack
+uv add ssot-registry web-app-analytics-governance-pack
 ```
 
 ## Use With The SSOT Registry CLI
 
 ```bash
-uvx --from ssot-registry ssot pack install ssot-pack-web-app-analytics
-uvx --from ssot-registry ssot pack sync . ssot-pack-web-app-analytics
+uvx --from ssot-registry ssot pack install web-app-analytics-governance-pack
+uvx --from ssot-registry ssot pack sync . web-app-analytics-governance-pack
 uv run ssot adr list .
 uv run ssot spec list .
 ```
@@ -91,5 +91,5 @@ spec_manifest = load_document_manifest("spec")
 ## Resources
 
 - GitHub repository: https://github.com/groupsum/web-app-analytics-governance-pack
-- PyPI package: https://pypi.org/project/ssot-pack-web-app-analytics/
+- PyPI package: https://pypi.org/project/web-app-analytics-governance-pack/
 - SSOT Registry: https://pypi.org/project/ssot-registry/

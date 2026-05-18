@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "ssot_package_name": "ssot-pack-web-app-analytics",
+  "ssot_package_name": "web-app-analytics-governance-pack",
   "origin": {
     "id": "pack:web-app-analytics",
-    "package_name": "ssot-pack-web-app-analytics",
+    "package_name": "web-app-analytics-governance-pack",
     "import_name": "ssot_pack_web_app_analytics",
     "kind": "governance-pack",
     "title": "Web And App Analytics Collection",
@@ -19,7 +19,7 @@
   "trust": {
     "trusted_by_default": false,
     "origin": "extension-pack",
-    "reservation_owner": "extension-pack:ssot-pack-web-app-analytics"
+    "reservation_owner": "extension-pack:web-app-analytics-governance-pack"
   },
   "documents": {
     "adr": {

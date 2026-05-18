@@ -13,7 +13,7 @@ except ModuleNotFoundError:  # pragma: no cover
 ROOT = Path(__file__).resolve().parents[1]
 ADR_TEMPLATES = ROOT / "src" / "ssot_pack_web_app_analytics" / "templates" / "adr"
 SPEC_TEMPLATES = ROOT / "src" / "ssot_pack_web_app_analytics" / "templates" / "specs"
-RESERVATION_OWNER = "extension-pack:ssot-pack-web-app-analytics"
+RESERVATION_OWNER = "extension-pack:web-app-analytics-governance-pack"
 MINIMUM_SCHEMA_VERSION = "0.4.0"
 
 
