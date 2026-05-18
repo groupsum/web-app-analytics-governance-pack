@@ -1,10 +1,13 @@
+<div align="center">
+
 # web-app-analytics-governance-pack
 
 [![PyPI version](https://img.shields.io/pypi/v/web-app-analytics-governance-pack.svg)](https://pypi.org/project/web-app-analytics-governance-pack/)
 [![Python versions](https://img.shields.io/pypi/pyversions/web-app-analytics-governance-pack.svg)](https://pypi.org/project/web-app-analytics-governance-pack/)
 [![License](https://img.shields.io/pypi/l/web-app-analytics-governance-pack.svg)](https://pypi.org/project/web-app-analytics-governance-pack/)
 [![Publish](https://github.com/groupsum/web-app-analytics-governance-pack/actions/workflows/publish.yml/badge.svg)](https://github.com/groupsum/web-app-analytics-governance-pack/actions/workflows/publish.yml)
-[![GitHub package](https://img.shields.io/badge/GitHub-package-24292f)](https://github.com/groupsum/web-app-analytics-governance-pack)
+
+</div>
 
 Installable SSOT governance pack for web analytics, app analytics, product analytics, CDP event specs, and browser lifecycle collection.
 
