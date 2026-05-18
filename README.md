@@ -55,33 +55,33 @@ Web And App Analytics Collection
 
 ## Included ADRs
 
-- `adr:analytics-collection-boundary` - Analytics Collection Boundary
-- `adr:customer-data-call-taxonomy-policy` - Customer Data Call Taxonomy Policy
-- `adr:vendor-analytics-payload-authority` - Vendor Analytics Payload Authority
-- `adr:client-sdk-collection-policy` - Client SDK Collection Policy
-- `adr:server-side-analytics-ingestion-policy` - Server-Side Analytics Ingestion Policy
-- `adr:web-platform-analytics-support-policy` - Web Platform Analytics Support Policy
+- [`adr:analytics-collection-boundary`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/adr/ADR-1001-analytics-collection-boundary.yaml) - Analytics Collection Boundary
+- [`adr:customer-data-call-taxonomy-policy`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/adr/ADR-1002-customer-data-call-taxonomy-policy.yaml) - Customer Data Call Taxonomy Policy
+- [`adr:vendor-analytics-payload-authority`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/adr/ADR-1003-vendor-analytics-payload-authority.yaml) - Vendor Analytics Payload Authority
+- [`adr:client-sdk-collection-policy`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/adr/ADR-1004-client-sdk-collection-policy.yaml) - Client SDK Collection Policy
+- [`adr:server-side-analytics-ingestion-policy`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/adr/ADR-1005-server-side-analytics-ingestion-policy.yaml) - Server-Side Analytics Ingestion Policy
+- [`adr:web-platform-analytics-support-policy`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/adr/ADR-1006-web-platform-analytics-support-policy.yaml) - Web Platform Analytics Support Policy
 
 ## Included SPECs
 
-- `spc:firebase-analytics-event-logging-requirements` - Firebase Analytics Event Logging Requirements
-- `spc:ga4-automatically-collected-event-requirements` - GA4 Automatically Collected Event Requirements
-- `spc:segment-identify-track-page-requirements` - Segment Identify Track Page Requirements
-- `spc:segment-screen-group-alias-requirements` - Segment Screen Group Alias Requirements
-- `spc:rudderstack-event-message-requirements` - RudderStack Event Message Requirements
-- `spc:mparticle-http-event-ingestion-requirements` - mParticle HTTP Event Ingestion Requirements
-- `spc:mparticle-web-sdk-event-tracking-requirements` - mParticle Web SDK Event Tracking Requirements
-- `spc:amplitude-http-v2-event-requirements` - Amplitude HTTP V2 Event Requirements
-- `spc:mixpanel-track-event-requirements` - Mixpanel Track Event Requirements
-- `spc:heap-client-event-tracking-requirements` - Heap Client Event Tracking Requirements
-- `spc:heap-server-side-track-requirements` - Heap Server-Side Track Requirements
-- `spc:posthog-capture-batch-requirements` - PostHog Capture And Batch Requirements
-- `spc:posthog-product-event-capture-requirements` - PostHog Product Event Capture Requirements
-- `spc:plausible-pageview-custom-event-requirements` - Plausible Pageview And Custom Event Requirements
-- `spc:plausible-stats-query-requirements` - Plausible Stats Query Requirements
-- `spc:beacon-analytics-delivery-requirements` - Beacon Analytics Delivery Requirements
-- `spc:page-visibility-engagement-requirements` - Page Visibility Engagement Requirements
-- `spc:web-app-manifest-analytics-context-requirements` - Web App Manifest Analytics Context Requirements
+- [`spc:firebase-analytics-event-logging-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2001-firebase-analytics-event-logging-requirements.yaml) - Firebase Analytics Event Logging Requirements
+- [`spc:ga4-automatically-collected-event-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2002-ga4-automatically-collected-event-requirements.yaml) - GA4 Automatically Collected Event Requirements
+- [`spc:segment-identify-track-page-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2003-segment-identify-track-page-requirements.yaml) - Segment Identify Track Page Requirements
+- [`spc:segment-screen-group-alias-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2004-segment-screen-group-alias-requirements.yaml) - Segment Screen Group Alias Requirements
+- [`spc:rudderstack-event-message-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2005-rudderstack-event-message-requirements.yaml) - RudderStack Event Message Requirements
+- [`spc:mparticle-http-event-ingestion-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2006-mparticle-http-event-ingestion-requirements.yaml) - mParticle HTTP Event Ingestion Requirements
+- [`spc:mparticle-web-sdk-event-tracking-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2007-mparticle-web-sdk-event-tracking-requirements.yaml) - mParticle Web SDK Event Tracking Requirements
+- [`spc:amplitude-http-v2-event-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2008-amplitude-http-v2-event-requirements.yaml) - Amplitude HTTP V2 Event Requirements
+- [`spc:mixpanel-track-event-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2009-mixpanel-track-event-requirements.yaml) - Mixpanel Track Event Requirements
+- [`spc:heap-client-event-tracking-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2010-heap-client-event-tracking-requirements.yaml) - Heap Client Event Tracking Requirements
+- [`spc:heap-server-side-track-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2011-heap-server-side-track-requirements.yaml) - Heap Server-Side Track Requirements
+- [`spc:posthog-capture-batch-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2012-posthog-capture-batch-requirements.yaml) - PostHog Capture And Batch Requirements
+- [`spc:posthog-product-event-capture-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2013-posthog-product-event-capture-requirements.yaml) - PostHog Product Event Capture Requirements
+- [`spc:plausible-pageview-custom-event-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2014-plausible-pageview-custom-event-requirements.yaml) - Plausible Pageview And Custom Event Requirements
+- [`spc:plausible-stats-query-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2015-plausible-stats-query-requirements.yaml) - Plausible Stats Query Requirements
+- [`spc:beacon-analytics-delivery-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2016-beacon-analytics-delivery-requirements.yaml) - Beacon Analytics Delivery Requirements
+- [`spc:page-visibility-engagement-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2017-page-visibility-engagement-requirements.yaml) - Page Visibility Engagement Requirements
+- [`spc:web-app-manifest-analytics-context-requirements`](https://github.com/groupsum/web-app-analytics-governance-pack/blob/master/src/ssot_pack_web_app_analytics/templates/specs/SPEC-2018-web-app-manifest-analytics-context-requirements.yaml) - Web App Manifest Analytics Context Requirements
 
 ## Install With uv
 
