@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:analytics-beacon-payload-profile",
+  "number": 2019,
+  "slug": "analytics-beacon-payload-profile",
+  "title": "Analytics Beacon Payload Profile",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines analytics payload and eligibility requirements when Beacon is selected as transport.",
+  "body": "## Requirements\n\n- Apply analytics consent, minimization, batching, and payload-size rules before transport.\n- Reference canonical Beacon delivery mechanics.\n- Preserve delivery outcome and ingestion reconciliation evidence.",
+  "decision_date": "2026-08-10",
+  "references": [
+    "https://www.w3.org/TR/beacon/"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "analytics",
+    "beacon",
+    "payload",
+    "profile"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:analytics-payloads-use-canonical-beacon-transport"
+  ]
+}

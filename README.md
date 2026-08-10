@@ -117,3 +117,7 @@ spec_manifest = load_document_manifest("spec")
 - PyPI package: [web-app-analytics-governance-pack](https://pypi.org/project/web-app-analytics-governance-pack/)
 - SSOT Registry: [ssot-registry](https://pypi.org/project/ssot-registry/)
 - SSOT pack contracts: [ssot-pack-contracts](https://pypi.org/project/ssot-pack-contracts/)
+
+## Normative ownership boundary
+
+Removed duplicate Beacon mechanics and added an analytics payload profile.

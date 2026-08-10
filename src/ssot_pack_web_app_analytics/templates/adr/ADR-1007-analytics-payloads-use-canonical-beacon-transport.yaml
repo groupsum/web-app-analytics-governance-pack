@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "adr",
+  "id": "adr:analytics-payloads-use-canonical-beacon-transport",
+  "number": 1007,
+  "slug": "analytics-payloads-use-canonical-beacon-transport",
+  "title": "Analytics Payloads Use Canonical Beacon Transport",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Analytics payload governance uses canonical Beacon transport mechanics.",
+  "body": "Analytics governance owns event payload, batching, consent eligibility, and ingestion semantics. RUM governance owns Beacon API transport and reliability mechanics.",
+  "decision_date": "2026-08-10",
+  "references": [
+    "https://www.w3.org/TR/beacon/"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "analytics",
+    "payloads",
+    "use",
+    "canonical",
+    "beacon",
+    "transport"
+  ]
+}

@@ -3,15 +3,30 @@
   "number": 2016,
   "slug": "beacon-analytics-delivery-requirements",
   "title": "Beacon Analytics Delivery Requirements",
-  "status": "active",
+  "status": "superseded",
   "supersedes": [],
-  "superseded_by": [],
+  "superseded_by": [
+    "spc:beacon-rum-delivery-requirements",
+    "spc:beacon-payload-reliability-requirements"
+  ],
   "spec_kind": "governance",
-  "adr_ids": ["adr:web-platform-analytics-support-policy"],
-  "primary_targets": ["W3C Beacon API"],
+  "adr_ids": [
+    "adr:web-platform-analytics-support-policy"
+  ],
+  "primary_targets": [
+    "W3C Beacon API"
+  ],
   "scope": {
-    "governs": ["browser beacon delivery", "non-blocking analytics submission", "page lifecycle dispatch behavior"],
-    "excludes": ["vendor event schemas", "server-side ingestion APIs", "general fetch behavior"]
+    "governs": [
+      "browser beacon delivery",
+      "non-blocking analytics submission",
+      "page lifecycle dispatch behavior"
+    ],
+    "excludes": [
+      "vendor event schemas",
+      "server-side ingestion APIs",
+      "general fetch behavior"
+    ]
   },
   "requirements": [
     "Document when Beacon API delivery is used for analytics submissions.",
@@ -23,5 +38,11 @@
     "Browser capability and dispatch fixture for beacon submissions.",
     "Runtime sample for page unload or visibility-change delivery.",
     "Fallback or failure-handling evidence for unsupported environments."
+  ],
+  "status_notes": [
+    {
+      "date": "2026-08-10",
+      "note": "Superseded by narrower canonical governance documents during the portfolio deduplication."
+    }
   ]
 }
