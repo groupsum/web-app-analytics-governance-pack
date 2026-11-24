@@ -329,7 +329,7 @@
     "title": "Analytics Beacon Payload Profile",
     "filename": "SPEC-2019-analytics-beacon-payload-profile.yaml",
     "target_path": ".ssot/specs/SPEC-2019-analytics-beacon-payload-profile.yaml",
-    "sha256": "ad94c2f66956648a88809ed8a3e71e3a9c5f303b77543157705041c5794bc360",
+    "sha256": "1a11cb43a5a22a788f2d9ea03cc9f7ae1199d8e5f0195fdd309f272db9054f56",
     "origin": "extension-pack",
     "reservation_owner": "extension-pack:web-app-analytics-governance-pack",
     "immutable": true,
