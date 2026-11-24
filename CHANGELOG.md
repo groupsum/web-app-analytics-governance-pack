@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0.dev2
+
+- Pending release notes.
+
 ## 0.2.0.dev1
 
 - Removed duplicate Beacon mechanics and added an analytics payload profile.
